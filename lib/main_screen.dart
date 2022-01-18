@@ -13,12 +13,10 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: navAppBar('Главный экран', context),
         drawer: navDrawer(context),
         body: Container(),
-      ),
     );
   }
 }

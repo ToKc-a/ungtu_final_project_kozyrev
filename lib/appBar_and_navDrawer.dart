@@ -1,27 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ungtu_final_project_kozyrev/main_screen.dart';
-
-class Navigation extends StatefulWidget {
-  const Navigation({Key? key}) : super(key: key);
-
-  @override
-  _NavigationState createState() => _NavigationState();
-}
-
-class _NavigationState extends State<Navigation> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        //'/exit': (context) => AuthScreen(),
-        '/main': (context) => MainScreen(),
-        //'/contacts': (context) => ContactScreen(),
-      },
-    );
-  }
-}
 
 Widget navDrawer(context) => Drawer(
       child: ListView(
@@ -53,10 +31,10 @@ Widget navDrawer(context) => Drawer(
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.contacts),
-            title: Text('Контакты'),
+            leading: Icon(Icons.account_circle),
+            title: Text('О приложении'),
             onTap: () {
-              Navigator.pushNamed(context, '/contacts');
+              Navigator.pushNamed(context, '/about');
             },
           ),
           Divider(),
@@ -82,9 +60,9 @@ PreferredSizeWidget navAppBar(String text, context) {
           icon: Icon(Icons.home)),
       IconButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/contacts');
+            Navigator.pushNamed(context, '/about');
           },
-          icon: Icon(Icons.contacts)),
+          icon: Icon(Icons.account_circle)),
       IconButton(
           onPressed: () {
             Navigator.pushNamed(context, '/exit');
