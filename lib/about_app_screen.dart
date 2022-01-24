@@ -19,7 +19,7 @@ class _AboutScreenState extends State<AboutScreen> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             Text(
               'Приложение создано в рамках итогового задания по курсу '
               '"Разработка кросс-платформенных мобильных приложений на Flutter для iOS и Android" '

@@ -18,9 +18,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/main',
+      initialRoute: '/auth',
       routes: {
-        '/exit': (context) => AuthScreen(),
+        '/auth': (context) => const AuthScreen(),
         '/main': (context) => const MainScreen(),
         '/about': (context) => const AboutScreen(),
       },

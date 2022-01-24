@@ -42,7 +42,7 @@ Widget navDrawer(context) => Drawer(
             leading: Icon(Icons.exit_to_app),
             title: Text('Выход на экран авторизации'),
             onTap: () {
-              Navigator.pushNamed(context, '/exit');
+              Navigator.pushNamed(context, '/auth');
             },
           ),
         ],
@@ -65,7 +65,7 @@ PreferredSizeWidget navAppBar(String text, context) {
           icon: Icon(Icons.account_circle)),
       IconButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/exit');
+            Navigator.pushNamed(context, '/auth');
           },
           icon: Icon(Icons.exit_to_app)),
     ],
