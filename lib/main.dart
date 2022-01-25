@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ungtu_final_project_kozyrev/about_app_screen.dart';
 import 'package:ungtu_final_project_kozyrev/main_screen.dart';
+import 'package:ungtu_final_project_kozyrev/splash_screen.dart';
 import 'auth_screen.dart';
 
 void main(){
@@ -18,11 +19,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/auth',
+      initialRoute: '/splash',
       routes: {
         '/auth': (context) => const AuthScreen(),
         '/main': (context) => const MainScreen(),
         '/about': (context) => const AboutScreen(),
+        '/splash': (context) => const SplashScreen(),
       },
     );
   }
